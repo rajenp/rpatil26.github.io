@@ -2,23 +2,38 @@
 <html>
 <head>
     <title>Rajendra Patil</title>
+    <meta charset="utf-8"/>
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <style>
+        @media print {
+            body {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            .page {
+                box-shadow: none !important;
+            }
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
         body {
-            padding: 0;
+            padding: 0 0 20px 0;
             margin: 0 auto;
             width: 800px;
             background: #bbb;
-            /*padding-bottom: 20px;*/
         }
 
         .page {
             font-size: .9em;
             width: 100%;
             color: #FFF;
-            /*box-shadow: 10px 10px 10px #888;*/
-            border: 1px solid #555;
+            box-shadow: 10px 10px 10px #888;
+            /*border: 1px solid #ddd;*/
         }
 
         .header {
@@ -37,7 +52,6 @@
         }
 
         .content {
-            /*padding: 20px;*/
             background: #fff;
             color: #000;
         }
@@ -45,9 +59,20 @@
         .name {
             color: #119cff;
             font-size: 5em;
-            font-weight: bold;
             text-shadow: -3px 3px 1px #000;
             font-family: 'Pacifico', cursive;
+        }
+
+        .name img {
+            position: relative;
+            left: -60px;
+            top: 50px;
+            border: 5px solid #eee;
+            border-radius: 100px;
+            -moz-transform: scale(1.4);
+            -o-transform: scale(1.4);
+            -webkit-transform: scale(1.4);
+            transform: scale(1.4);
         }
 
         .tagline {
@@ -77,10 +102,15 @@
         }
 
         a {
+            color: #1686ff;
+        }
+
+        .box a, .menu a {
+            color: #fff;
             vertical-align: 5px;
             padding: 5px;
-            color: #fff;
         }
+
         .menu a {
             color: aqua;
         }
@@ -110,9 +140,6 @@
             font-family: 'Pacifico', cursive;
             font-size: 1.2em;
             padding: 2px 10px;
-            /*border-radius: 6px;*/
-            /*background: #ddd;*/
-            /*border: 1px solid #ccc;*/
             border-bottom: 4px double #ccc;
             color: #0f7acb;
         }
@@ -122,6 +149,7 @@
             text-indent: 10%;
             text-align: center;
             font-size: .9em;
+            line-height: 20px;;
 
         }
 
@@ -157,6 +185,8 @@
 
         .w_exp_text {
             text-align: justify;
+            margin: 8px auto;
+            line-height: 20px;;
         }
 
         .skills {
@@ -164,14 +194,32 @@
             list-style: none;
         }
 
+        .skills:before, .skills:after {
+            padding: 0;
+            margin: 0;
+            font-size: 1em;
+            font-weight: bold;
+            color: #aaa;
+
+        }
+
+        .skills:before {
+            content: "{";
+
+        }
+
+        .skills:after {
+            content: "}";
+        }
+
         .skills li {
-            padding: 10px 5px;
+            padding: 5px;
             clear: both;
             color: #444;
         }
 
         .skills li i {
-            margin: 2px;
+            margin: 0 2px;
         }
 
         .skills li span {
@@ -181,14 +229,6 @@
             padding-left: 10px;
         }
 
-        .name img {
-            position: relative;
-            left: -60px;
-            top: 50px;
-            border: 5px solid #eee;
-            border-radius: 100px;
-            transform: scale(1.4);
-        }
     </style>
 </head>
 <body>
@@ -205,9 +245,12 @@
     </div>
     <div class="menu">
         <div class="top up-traingle"></div>
-        <i class="fa fa-2x fa-phone-square"></i> <a target="_blank" href="callto:+91-782-960-0379"> +91-782-960-0379 </a>
-        <i class="fa fa-2x fa-envelope-square"></i> <a target="_blank" href="mailto:rrpatil26@gmail.com"> rrpatil26@gmail.com </a>
-        <i class="fa fa-2x fa-twitter-square"></i> <a target="_blank" href="http://twitter.com/rrpatil26"> @rrpatil26 </a>
+        <i class="fa fa-2x fa-phone-square"></i> <a target="_blank" href="callto:+91-782-960-0379">
+        +91-782-960-0379 </a>
+        <i class="fa fa-2x fa-envelope-square"></i> <a target="_blank" href="mailto:rrpatil26@gmail.com">
+        rrpatil26@gmail.com </a>
+        <i class="fa fa-2x fa-twitter-square"></i> <a target="_blank" href="http://twitter.com/rrpatil26">
+        @rrpatil26 </a>
         <i class="fa fa-2x fa-github-square"></i> <a target="_blank" href="https://github.com/rpatil26"> /rpatil26 </a>
         <i class="fa fa-2x fa-linkedin-square"></i> <a target="_blank" href="https://www.linkedin.com/in/rajendrapatil">
         /in/rajendrapatil </a>
@@ -217,8 +260,9 @@
         <div class="left">
             <div class="s_section">
                 <div class="title"><i class="fa fa-user"></i> About Me</div>
-                <p class="s_content">
-                    More than 11 years of experience in designing, building and leading web and mobile products.
+                <p class="s_content about_me">
+                    I have more than 11 years of experience in designing, building and leading.
+                    In my spare time I contribute some open source work.
                 </p>
             </div>
 
@@ -279,13 +323,8 @@
 
             <div class="s_section">
                 <div class="title"><i class="fa fa-graduation-cap"></i> Education</div>
-                <ul>
-                    <li>Bachelor of Engineering (BE)</li>
-                    <li>Computer Engineering</li>
-                    <li>Pune University</li>
-                    <li>First Class</li>
-                    <li>2000 - 2004</li>
-                </ul>
+                <p class="s_content">Bachelor of Engineering (BE) in Computer from Pune University with First Class
+                    (2000 - 2004).</p>
             </div>
 
         </div>
@@ -293,7 +332,9 @@
             <div class="s_section">
                 <div class="title"><i class="fa fa-cogs"></i> Work Experience</div>
                 <div class="w_exp_section">
-                    <div class="w_exp_title">08/2010 - Present, Lead Engineer, SuccessFactors - SAP</div>
+                    <div class="w_exp_title">08/2010 - Present, Lead Engineer, <a target="_blank"
+                                                                                  href="http://www.successfactors.com/">SuccessFactors
+                        - SAP</a></div>
                     <ul class="w_exp_text">
                         <li> Building UIs for MDF that changes the way enterprise apps be built.</li>
                         <li> Challenging and fun part is to let Admins build UIs for
@@ -305,7 +346,9 @@
                     </ul>
                 </div>
                 <div class="w_exp_section">
-                    <div class="w_exp_title">02/2010 - 07/2010, Sr. JavaScript Engineer, GAIAN Solutions</div>
+                    <div class="w_exp_title">02/2010 - 07/2010, Sr. JavaScript Engineer, <a target="_blank"
+                                                                                            href="http://www.gaiansolutions.com/">GAIAN
+                        Solutions</a></div>
                     <ul class="w_exp_text">
                         <li>Built and contributed to a JS Framework for IPTV and STB Apps.</li>
                         <li>Using HTML5 features such as Video, Worker, Storage and Canvas etc.</li>
@@ -313,7 +356,8 @@
                     </ul>
                 </div>
                 <div class="w_exp_section">
-                    <div class="w_exp_title">09/2007 - 02/2010, Zimbra - Yahoo! - VMWare, Sr. Ajax Engineer</div>
+                    <div class="w_exp_title">09/2007 - 02/2010, <a target="_blank" href="https://www.zimbra.com/">
+                        Zimbra - Yahoo! - VMWare, Sr. Ajax Engineer</a></div>
                     <ul class="w_exp_text">
                         <li>Added new features (Cal free/busy, Zimlet management etc.)</li>
                         <li>Also fixed various bugs and XSS issues across Ajax, Lite and Mobile Clients.</li>
@@ -323,9 +367,11 @@
                 <div class="w_exp_section">
                     <div class="w_exp_title">07/2004 - 09/2007, various start-ups and small organizations</div>
                     <ul class="w_exp_text">
-                        <li>Worked at few small to medium, startup-sized companies (Mithi,
-                            Telesoft, SunGard etc.) in diverse domains (Finance, Margin, DVR, Communication
-                            & collaboration) using Java, J2EE, SCA, PHP, Ruby and various technologies.
+                        <li>Worked at few small to medium, startup-sized companies (<a href="http://mithi.com"
+                                                                                       target="_blank">Mithi</a>,
+                            <a href="http://www.wesleyclover.com/" target="_blank">Telesoft</a>, <a
+                                    href="http://www.sungard.com/" target="_blank">SunGard</a> etc.) in diverse domains
+                            using Java, J2EE, SCA, PHP, Ruby and various technologies.
                         </li>
                     </ul>
                 </div>
@@ -333,31 +379,37 @@
             <div class="s_section">
                 <div class="title"><i class="fa fa-cogs"></i> Open Source Projects</div>
                 <div class="box">
-                    <div class="p_title"><a target="_blank" href="http://rpatil26.github.io/webutilities">webutilities</a></div>
+                    <div class="p_title"><a target="_blank"
+                                            href="http://rpatil26.github.io/webutilities">webutilities</a></div>
                     <p>Java Library to speed up front end of a J2EE web Application.</p>
                 </div>
                 <div class="box">
-                    <div class="p_title"><a target="_blank" href="https://www.npmjs.com/package/route-r">route-r</a></div>
+                    <div class="p_title"><a target="_blank" href="https://www.npmjs.com/package/route-r">route-r</a>
+                    </div>
                     <p>Lite HTTP Request routing and serving framework for Node.</p>
                 </div>
                 <div class="box">
-                    <div class="p_title"><a target="_blank" href="https://github.com/rpatil26/android-twitrr">twittr</a></div>
+                    <div class="p_title"><a target="_blank" href="https://github.com/rpatil26/android-twitrr">twittr</a>
+                    </div>
                     <p>Native Android App: Twitter Client using Twitter4j.</p>
                 </div>
                 <div class="box">
                     <div class="p_title"><a target="_blank"
-                            href="https://github.com/rpatil26/LinkedInPlugin-for-LockInfo">li-linkedin</a></div>
+                                            href="https://github.com/rpatil26/LinkedInPlugin-for-LockInfo">li-linkedin</a>
+                    </div>
                     <p>The LinkedIn plugin for LockInfo Framework (iOS).</p>
                 </div>
                 <div class="box">
-                    <div class="p_title"><a target="_blank" href="https://github.com/rpatil26/css3-chrome-logo">chrome-logo</a></div>
+                    <div class="p_title"><a target="_blank" href="https://github.com/rpatil26/css3-chrome-logo">chrome-logo</a>
+                    </div>
                     <p>CSS3 experiment to build Chrome Logo in Pure HTML &amp; CSS3.</p>
                 </div>
                 <div class="box">
-                    <div class="p_title"><a target="_blank" href="https://github.com/rpatil26/js-fireworks">js-fireworks</a></div>
+                    <div class="p_title"><a target="_blank"
+                                            href="https://github.com/rpatil26/js-fireworks">js-fireworks</a></div>
                     <p>An experiment to build fireworks using HTML, JS &amp; CSS.</p>
                 </div>
-                <div align="right">and few more...</div>
+                <div style="clear:both" align="right">and few more...</div>
             </div>
         </div>
         <div style="clear:both"></div>
