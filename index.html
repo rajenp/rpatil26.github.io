@@ -3,6 +3,9 @@
 <head>
     <title>Rajendra Patil</title>
     <meta charset="utf-8"/>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <style>
@@ -26,14 +29,12 @@
             margin: 0 auto;
             width: 800px;
             background: #bbb;
-        }
-
-        .page {
+            font-family: 'Calibri';
             font-size: .9em;
+        }
+        .page {
             width: 100%;
-            color: #FFF;
             box-shadow: 10px 10px 10px #888;
-            /*border: 1px solid #ddd;*/
         }
 
         .header {
@@ -144,6 +145,10 @@
             color: #0f7acb;
         }
 
+        .title span{
+            color: #888;
+        }
+
         p.s_content {
             padding: 0 10px;
             text-indent: 10%;
@@ -159,7 +164,7 @@
             height: 92px;
             border-radius: 20px;
             background: #0c63a5;
-            margin: 10px 15px;
+            margin: 12px 15px;
             padding: 5px;
             text-align: center;
             border: 1px solid #444;
@@ -187,6 +192,7 @@
             text-align: justify;
             margin: 8px auto;
             line-height: 20px;;
+            color: #555;
         }
 
         .skills, .prof_skills {
@@ -199,7 +205,7 @@
             margin: 0;
             font-size: 1em;
             font-weight: bold;
-            color: #aaa;
+            color: #bbb;
 
         }
 
@@ -260,7 +266,7 @@
     <div class="content">
         <div class="left">
             <div class="s_section">
-                <div class="title"><i class="fa fa-user"></i> About Me</div>
+                <div class="title"><i class="fa fa-user"></i> About <span>Me</span></div>
                 <p class="s_content about_me">
                     I have more than 11 years of experience in designing, building and leading.
                     In my spare time I contribute some open source work.
@@ -275,14 +281,14 @@
                 </p>
             </div> -->
             <div class="s_section">
-                <div class="title"><i class="fa fa-line-chart"></i> Professional Skills</div>
+                <div class="title"><i class="fa fa-line-chart"></i> Professional <span>Skills</span></div>
                 <p class="s_content">
                 Excellent Communication, Effective Leadership, Decision-Making, Creativity, Listening and Problem Solving.
                 </p>
             </div>
 
             <div class="s_section">
-                <div class="title"><i class="fa fa-code"></i> Core Skills</div>
+                <div class="title"><i class="fa fa-code"></i> Core <span>Skills</span></div>
                 <ul class="skills">
                     <li>JavaScript
                         <span>
@@ -320,7 +326,7 @@
             </div>
 
             <div class="s_section">
-                <div class="title"><i class="fa fa-wrench"></i> More Skills</div>
+                <div class="title"><i class="fa fa-wrench"></i> More <span>Skills</span></div>
                 <p class="s_content">
                     Angular, jQuery, Ember, Backbone, YUI
                     and Java, JEE, PHP (Symphony), Ruby (Rails), Spring, Web Services
@@ -337,7 +343,7 @@
         </div>
         <div class="right">
             <div class="s_section">
-                <div class="title"><i class="fa fa-cogs"></i> Work Experience</div>
+                <div class="title"><i class="fa fa-cogs"></i> Work <span>Experience</span></div>
                 <div class="w_exp_section">
                     <div class="w_exp_title">08/2010 - Present, Lead Engineer, <a target="_blank"
                                                                                   href="http://www.successfactors.com/">SuccessFactors
@@ -384,7 +390,7 @@
                 </div>
             </div>
             <div class="s_section">
-                <div class="title"><i class="fa fa-cogs"></i> Open Source Projects</div>
+                <div class="title"><i class="fa fa-cogs"></i> Open Source <span>Projects</span></div>
                 <div class="box">
                     <div class="p_title"><a target="_blank"
                                             href="http://rpatil26.github.io/webutilities">webutilities</a></div>
