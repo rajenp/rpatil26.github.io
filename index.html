@@ -56,16 +56,10 @@
     }
     
     .js-on .content {
-        -webkit-transition: all 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035);
-        -moz-transition: all 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035);
-        -o-transition: all 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035);
-        transition: all 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035);
-        /* easeInExpo */
-        -webkit-transition-timing-function: cubic-bezier(0.950, 0.050, 0.795, 0.035);
-        -moz-transition-timing-function: cubic-bezier(0.950, 0.050, 0.795, 0.035);
-        -o-transition-timing-function: cubic-bezier(0.950, 0.050, 0.795, 0.035);
-        transition-timing-function: cubic-bezier(0.950, 0.050, 0.795, 0.035);
-        /* easeInExpo */
+        -webkit-transition: height 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035);
+        -moz-transition: height 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035);
+        -o-transition: height 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035);
+        transition: height 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035);
         height: 0;
     }
     
@@ -382,7 +376,7 @@
                 <div class="s_section">
                     <div class="title"><i class="fa fa-wrench"></i> More <span>Skills</span></div>
                     <p class="s_content">
-                        Angular, jQuery, Ember, Backbone, YUI and Java, JEE, PHP (Symphony), Ruby (Rails), Spring, Web Services (CXF) also mobile (native iOS, Android, Hybrid) Apps and more.
+                        Angular, React, jQuery, Ember, Backbone and Java, JEE, PHP (Symphony), Ruby (Rails), Spring, Web Services (CXF) also mobile (native iOS, Android, Hybrid) Apps and more.
                     </p>
                 </div>
                 <div class="s_section">
@@ -472,7 +466,7 @@
                     <div class="box"><i class="fa fa-html5"> JS</i>
                         <div class="p_title"><a target="_blank" href="https://github.com/rpatil26/js-todos">js-todos</a>
                         </div>
-                        <p> Simple TODO application built using vanilla JS, HTML and CSS. </p>
+                        <p> Simple TODO app built using vanilla JS (React Views), HTML and CSS. </p>
                     </div>
                     <div class="box more">
                         <a target="_blank" href="https://github.com/rpatil26?tab=repositories">
@@ -498,7 +492,7 @@
         $("body").className = "js-on";
         setTimeout(function() {
             $("content").className = "content grow";
-        }, 100);
+        }, 450);
         //G
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
