@@ -57,7 +57,7 @@
 
     .content,
     .js-on .content.grow {
-        height: 911px;
+        height: 916px;
         overflow: visible;
     }
 
@@ -73,7 +73,7 @@
         position: relative;
         background: #fff;
         color: #000;
-        height: auto;
+        /*height: auto;*/
         overflow: hidden;
     }
 
@@ -164,7 +164,6 @@
         padding: 5px;
         background: #666;
         font-size: .82em;
-        text-align: center;
         position: relative;
     }
 
@@ -203,7 +202,7 @@
     }*/
 
     p.s_content {
-        padding: 5px 10px;
+        padding: 0 10px;
         text-indent: 10%;
         font-size: .9em;
         line-height: 1.5em;
@@ -214,7 +213,7 @@
     .header,
     .content,
     .footer {
-        transition: all 800ms;
+        transition: all 1.2s;
         /*cubic-bezier(0.550, 0.085, 0.680, 0.530);*/
     }
 
@@ -286,6 +285,10 @@
         transform: scale(1.2);
     }
 
+    .over .box {
+        transform: scale(1);
+    }
+
     .box {
         float: left;
         width: 131px;
@@ -298,6 +301,8 @@
         text-align: center;
         border: 1px solid #eee;
         position: relative;
+        transition: all 1s;
+        transform: scale(.7);
     }
 
     .box p {
@@ -574,7 +579,7 @@
         </div>
         <div class="footer">
             <div class="copy">
-                Crafted using HTML, CSS &amp; JS at <a href="http://rpatil26.github.com">http://rpatil26.github.com</a>. Thank you for having a look at my CV and work. <a target="_blank" href="https://dl.dropboxusercontent.com/u/8498648/Rajendra_Patil.pdf"><i class="dl fa fa-download"> PDF </i></a>
+                Crafted using HTML, CSS &amp; JS at <a href="http://rpatil26.github.com">http://rpatil26.github.com</a> <a target="_blank" href="https://dl.dropboxusercontent.com/u/8498648/Rajendra_Patil.pdf"><i class="dl fa fa-download"> PDF </i></a>
             </div>
         </div>
     </div>
@@ -583,13 +588,22 @@
         return document.querySelectorAll(id);
     };
     var body = $("#body")[0],
-        content = $("#content")[0];
+        content = $("#content")[0],
+        left = $(".right")[0];
     //Little animation using CSS3 transition, only if js on
     setTimeout(function() {
         body.className = " fliph";
-        content.addEventListener("transitionend", function() {
-            body.className = "fliph flipv";
+
+        left.addEventListener("transitionend", function() {
+            body.className = "fliph flipv over";
         }, false);
+
+        content.addEventListener("transitionend", function(event) {
+            if (body.className.indexOf("flipv") < 0) {
+                body.className = "fliph flipv";
+            }
+        }, false);
+
     }, 0);
 
     //G
