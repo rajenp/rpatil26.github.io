@@ -19,11 +19,11 @@
             box-shadow: none !important;
         }
     }
-    
+
     html {
         box-sizing: border-box;
     }
-    
+
     body {
         padding: 0 0 20px 0;
         margin: 0 auto;
@@ -33,37 +33,42 @@
         font-size: .9em;
         position: relative;
     }
-    
-    .page {
-        width: 100%;
+
+    .flipv .page {
         box-shadow: 10px 10px 10px #888;
     }
-    
+
+    .page {
+        width: 100%;
+        transition: all 1s;
+    }
+
     .header {
         position: relative;
         height: 200px;
         text-align: center;
         background: #333;
     }
-    
+
     .footer {
         padding: 5px;
         position: relative;
     }
-    
+
     .content,
     .js-on .content.grow {
         height: 911px;
+        overflow: visible;
     }
-    
+
     .js-on .content {
         -webkit-transition: height 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035);
         -moz-transition: height 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035);
         -o-transition: height 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035);
         transition: height 500ms cubic-bezier(0.950, 0.050, 0.795, 0.035);
-        height: 0;
+        /*height: 0;*/
     }
-    
+
     .content {
         position: relative;
         background: #fff;
@@ -71,14 +76,14 @@
         height: auto;
         overflow: hidden;
     }
-    
+
     .name span {
         color: #119cff;
         font-size: 4em;
         text-shadow: -3px 3px 1px #000;
         font-family: 'Pacifico', cursive;
     }
-    
+
     .name img {
         position: relative;
         left: -30px;
@@ -91,7 +96,7 @@
         -ms-transform: scale(1.3);
         transform: scale(1.3);
     }
-    
+
     .contact {
         float: right;
         width: 160px;
@@ -101,22 +106,22 @@
         list-style: none;
         margin-top: 15px;
     }
-    
+
     .contact li a {
         vertical-align: 7px;
         padding: 0 5px;
         font-size: .9em;
     }
-    
+
     .contact li {
         padding: 2px 5px;
     }
-    
+
     .tagline {
         font-size: 1em;
         padding: 0 120px;
     }
-    
+
     .left {
         float: left;
         width: 250px;
@@ -124,22 +129,22 @@
         background: #eee;
         padding: 20px 10px;
     }
-    
+
     .right {
         padding: 20px;
         float: left;
         width: 490px;
     }
-    
+
     .sep {
         color: yellow;
         padding: 0 10px;
     }
-    
+
     a {
         color: #1686ff;
     }
-    
+
     .box a,
     .footer a,
     .contact li a,
@@ -149,12 +154,12 @@
     .tagline {
         color: #fff;
     }
-    
+
     .box a {
         vertical-align: 5px;
         padding: 5px;
     }
-    
+
     .footer {
         padding: 5px;
         background: #666;
@@ -162,7 +167,7 @@
         text-align: center;
         position: relative;
     }
-    
+
     .footer:before,
     .header:after {
         display: inline-block;
@@ -175,12 +180,12 @@
         left: 90px;
         border-bottom-color: #666;
     }
-    
+
     .header:after {
         border-bottom-color: #eee;
         top: 160px;
     }
-    
+
     .title {
         font-family: 'Pacifico', cursive;
         font-size: 1.2em;
@@ -188,19 +193,75 @@
         border-bottom: 4px double #ccc;
         color: #0f7acb;
     }
-    
+
     .title span {
         color: #888;
     }
-    
+    /*.skills,
     p.s_content {
-        padding: 0 10px;
+        margin: 10px 0;
+    }*/
+
+    p.s_content {
+        padding: 5px 10px;
         text-indent: 10%;
         font-size: .9em;
         line-height: 1.5em;
     }
-    
-    .animates,
+
+    .left,
+    .right,
+    .header,
+    .content,
+    .footer {
+        transition: all 800ms;
+        /*cubic-bezier(0.550, 0.085, 0.680, 0.530);*/
+    }
+
+    .left {
+        transform: rotateY(90deg);
+        transform-origin: center right;
+    }
+
+    .right {
+        transform: rotateY(-90deg);
+        transform-origin: center left;
+        background: #fff;
+    }
+
+    .header {
+        transform: rotateX(-90deg);
+        transform-origin: bottom center;
+    }
+
+    .content {
+        transform: rotateX(90deg);
+        transform-origin: top center;
+        overflow: visible;
+        background: #fff;
+    }
+    /* expand header and content */
+
+    .fliph .header,
+    .fliph .content {
+        transform: perspective(600px) rotateX(0deg);
+    }
+    /* expand left and right */
+
+    .flipv .left,
+    .flipv .right {
+        transform: perspective(600px) rotateY(0deg);
+    }
+
+    .footer {
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    .flipv .footer {
+        opacity: 1;
+    }
+
     .box,
     .contact .fa,
     .s_section .fa {
@@ -209,8 +270,7 @@
         -o-transition: all .7s;
         transition: all .7s;
     }
-    
-    .animate,
+
     .contact li:hover .fa,
     .s_section:hover .title .fa {
         -webkit-transform: scale(1.2) rotate(360deg);
@@ -218,14 +278,14 @@
         -o-transform: scale(1.2) rotate(360deg);
         transform: scale(1.2) rotate(360deg);
     }
-    
+
     .box:hover {
         -webkit-transform: scale(1.2);
         -moz-transform: scale(1.2);
         -o-transform: scale(1.2);
         transform: scale(1.2);
     }
-    
+
     .box {
         float: left;
         width: 131px;
@@ -239,38 +299,38 @@
         border: 1px solid #eee;
         position: relative;
     }
-    
+
     .box p {
         color: #d2f7ff;
         font-size: .8em;
         margin: 5px auto;
     }
-    
+
     .p_title {
         font-weight: bold;
         font-size: 1.2em;
     }
-    
+
     .w_exp_title {
         font-size: 1em;
         font-weight: bold;
         padding: 8px;
         border-bottom: 1px dashed #ddd;
     }
-    
+
     .w_exp_text {
         text-align: justify;
-        margin: 8px auto;
+        margin: 1px auto;
         line-height: 1.35em;
         color: #555;
     }
-    
+
     .skills,
     .prof_skills {
         padding-left: 10px;
         list-style: none;
     }
-    
+
     .skills:before,
     .skills:after {
         padding: 0;
@@ -279,33 +339,33 @@
         font-weight: bold;
         color: #bbb;
     }
-    
+
     .skills:before {
         content: "{";
     }
-    
+
     .skills:after {
         content: "}";
     }
-    
+
     .skills li {
         padding: 5px;
         clear: both;
         color: #444;
     }
-    
+
     .skills li i {
         margin: 0 2px;
         color: #0c63a5;
     }
-    
+
     .skills li span {
         float: right;
         position: relative;
         top: -10px;
         padding-left: 10px;
     }
-    
+
     .box i {
         position: absolute;
         left: -15px;
@@ -319,7 +379,7 @@
         line-height: 23px;
         font-size: .7em;
     }
-    
+
     .dl {
         background: #fff;
         border: 1px solid #444;
@@ -360,16 +420,13 @@
                 <div class="s_section">
                     <div class="title"><i class="fa fa-user"></i> About <span>Me</span></div>
                     <p class="s_content about_me">
-                        Over 11 years experience in building &amp; leading beautiful products. Front-End specialist with in-depth hands-on skills in HTML, JS, CSS. Delivered high performance and diverse range of products throughout.
+                        Over 11 years of experience in building &amp; leading beautiful products. Front-End specialist with in-depth hands-on skills in HTML, JS, CSS. Delivered high performance and diverse range of products throughout.
                     </p>
                 </div>
                 <div class="s_section">
                     <div class="title"><i class="fa fa-line-chart"></i> Professional <span>Skills</span></div>
                     <p class="s_content">
-                        Excellent Communication, attentive, accurately articulates &amp; conveys ideas.
-Energetic, creative, highly dependable person with strong work ethics.
-Responsive &amp; diplomatic facilitator, who drives, inspires &amp; motivates the team.
-Passionate, Problem solver, Creative &amp; a Team Player.
+                        Excellent Communication, attentive, accurately articulates ideas. Energetic, creative, highly dependable, strong work ethics. Responsive &amp; diplomatic facilitator, drives, inspires &amp; motivates. Problem solver &amp; a Team Player.
                     </p>
                 </div>
                 <div class="s_section">
@@ -412,8 +469,7 @@ Passionate, Problem solver, Creative &amp; a Team Player.
                 <div class="s_section">
                     <div class="title"><i class="fa fa-wrench"></i> More <span>Skills</span></div>
                     <p class="s_content">
-                        JavaScript, Nodejs, HTML5, CSS3, Angular, React, jQuery, Ember, SAPUI5, 
-Native Mobile Apps, iOS, Android &amp; hybrid.
+                        Nodejs, HTML5, CSS3, Angular, React, jQuery, Ember, SAPUI5, Native Mobile Apps, iOS, Android &amp; hybrid.
                     </p>
                 </div>
                 <div class="s_section">
@@ -526,11 +582,15 @@ Native Mobile Apps, iOS, Android &amp; hybrid.
     var $ = function(id) {
         return document.querySelectorAll(id);
     };
+    var body = $("#body")[0],
+        content = $("#content")[0];
     //Little animation using CSS3 transition, only if js on
-    $("#body")[0].className = "js-on";
     setTimeout(function() {
-        $("#content")[0].className = "content grow";
-    }, 450);
+        body.className = " fliph";
+        content.addEventListener("transitionend", function() {
+            body.className = "fliph flipv";
+        }, false);
+    }, 0);
 
     //G
     (function(i, s, o, g, r, a, m) {
