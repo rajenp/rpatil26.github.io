@@ -19,8 +19,8 @@
             box-shadow: none !important;
         }
     }
-    html *{
-        box-sizing: content-box;
+    html {
+        box-sizing: border-box;
     }
 
     body {
@@ -29,12 +29,12 @@
         width: 810px;
         background: #bbb;
         font-family: 'Calibri';
-        font-size: .925em;
+        font-size: .9em;
         position: relative;
     }
 
     .flipv .page {
-        /*box-shadow: 10px 10px 10px #888;*/
+        box-shadow: 10px 10px 10px #888;
     }
 
     .page {
@@ -56,6 +56,7 @@
 
     .content,
     .js-on .content.grow {
+        height: 916px;
         overflow: visible;
     }
 
@@ -71,7 +72,7 @@
         position: relative;
         background: #fff;
         color: #000;
-        height: auto;
+        /*height: auto;*/
         overflow: hidden;
     }
 
@@ -124,9 +125,9 @@
     .left {
         /*float: left;*/
         width: 250px;
+        /*height: 888px;*/
         background: #eee;
         padding: 20px 10px;
-        overflow: hidden;
         display: table-cell;
     }
 
@@ -298,8 +299,8 @@
         border-radius: 20px;
         background: #0c63a5;
         margin: 0 10px;
-        margin-top: 20px;
-        padding: 5px;
+        margin-top: 25px;
+        padding: 2px 5px;
         text-align: center;
         border: 1px solid #eee;
         position: relative;
